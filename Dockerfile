@@ -2,7 +2,7 @@ FROM golang:1.23-bookworm AS build
 
 RUN apt-get update && apt-get install -y libgeos++-dev libleveldb-dev
 
-RUN go install -tags="ldbpost121" github.com/omniscale/imposm3/cmd/imposm@v0.14.22
+RUN go install -tags="ldbpost121" github.com/omniscale/imposm3/cmd/imposm@v0.14.2
 
 FROM gcr.io/distroless/cc-debian12
 
